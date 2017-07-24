@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Side Menu</title>
+    <link rel="stylesheet" href="example-2.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" rel="stylesheet" >
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="inner-container">
+      
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()"> <!--click event-->
+         <!--Hamburger button-->
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="white" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="white" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="white" stroke-width="5"/>
+          </svg>
+        </a>  
+      </span> 
+      
+       <ul class="navbar-nav">
+         <li><a href="#">Contact</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Home</a></li>     
+       </ul>
+       
+      <div class="logo">
+        <a href="example-2.html"><img src="images/logo.png" alt="" height="70%"></a>
+      </div>
+       
+        <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> <!--close button with a cross in it and onclick close event-->
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+     <!--Main container-->
+    <div id="main">
+       
+        <div class="phone">
+            <img src="images/phone.png" alt="cellphone">
+        </div>
+        
+        <div class="text-container">
+                <div class="main-text">
+                    <div class="caption">We design and build beautiful web & mobile apps</div>
+                    
+                    <p>You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality. - Walt Disney. <br> 
+                    </p>
+                </div>
+                
+            <div class="green-button">
+                <button>know more</button>
+            </div>
+        </div> 
+    </div>
+    
+    <!--White block containing forms-->
+    <div class="whiteblock">
+        <div class="contact-form">
+          <p class="lets-talk">Lets Talk</p>
+           
+            <form action="#">
+                
+                <input name="name" placeholder="First Name" class="textbox" required />
+
+                <input name="name" placeholder="Last Name" class="textbox-lastname" required />
+
+                <input name="emailaddress" placeholder="Email Address" class="textbox" type="email" required />
+
+                <div class="select-form">
+                    <select>
+           <option value="">App Design</option>
+           <option value="">Mobile Apps</option>
+           <option value="">Desktop Apps</option>
+        </select>
+                </div>
+
+                <textarea rows="4" cols="40" name="subject" placeholder="Type your query here" class="message" required></textarea>
+
+                <input name="submit" type="submit" class="button" value="send">
+
+            </form>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-copyright">© 2015 indipixel design
+        </div>
+        <div class="footer-email">
+            <a href="">contact@yourmail.com</a>
+        </div>
+        <div class="mailicon"><img src="images/mail-icon.png" alt="">
+        </div>
+    </footer>
+    
+    <script>
+      function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        /*document.getElementById('main').style.marginRight = '250px';*/
+      }
+      
+      function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        /*document.getElementById('main').style.marginRight = '0';*/
+      }
+    </script>
+    
+</body>
+</html>
